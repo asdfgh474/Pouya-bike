@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pouya Bike - فروشگاه دوچرخه</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+          font-family: 'Material Symbols Outlined';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: normal;
+          text-transform: none;
+          display: inline-block;
+          white-space: nowrap;
+          word-wrap: normal;
+          direction: ltr;
+          -webkit-font-feature-settings: 'liga';
+          -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#dae2fd",
+                      "secondary": "#565e74",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-surface": "#191c1e",
+                      "tertiary": "#4d5d73",
+                      "surface-container-highest": "#e0e3e5",
+                      "inverse-surface": "#2d3133",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "primary-fixed-dim": "#adc6ff",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#fefcff",
+                      "outline-variant": "#c2c6d6",
+                      "on-background": "#191c1e",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#d3e4fe",
+                      "surface-bright": "#f7f9fb",
+                      "inverse-on-surface": "#eff1f3",
+                      "primary-fixed": "#d8e2ff",
+                      "on-primary-fixed": "#001a42",
+                      "surface": "#f7f9fb",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#f2f4f6",
+                      "primary": "#0058be",
+                      "background": "#f7f9fb",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "secondary-container": "#dae2fd",
+                      "outline": "#727785",
+                      "on-secondary-fixed": "#131b2e",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#d8dadc",
+                      "surface-container": "#eceef0",
+                      "on-tertiary-container": "#fdfcff",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "on-secondary-container": "#5c647a",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#adc6ff",
+                      "on-surface-variant": "#424754",
+                      "surface-variant": "#e0e3e5",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#005ac2",
+                      "surface-container-high": "#e6e8ea",
+                      "tertiary-container": "#66768d",
+                      "primary-container": "#2170e4",
+                      "on-primary-fixed-variant": "#004395",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "section-gap": "120px",
+                      "container-max": "1280px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": [
+                              "Vazirmatn"
+                      ],
+                      "body-md": [
+                              "Vazirmatn"
+                      ],
+                      "body-lg": [
+                              "Vazirmatn"
+                      ],
+                      "label-sm": [
+                              "Vazirmatn"
+                      ],
+                      "display-lg": [
+                              "Vazirmatn"
+                      ],
+                      "headline-md": [
+                              "Vazirmatn"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.8",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "30px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-on-surface/80 backdrop-blur-md w-full top-0 sticky z-50 border-b border-outline-variant dark:border-outline shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Navigation Links (Hidden on Mobile, handled by BottomNav if applicable, but per instructions we keep TopNav for desktop) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-lg" href="#">خانه</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 hover:translate-y-[-2px] font-body-lg" href="#products">محصولات</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 hover:translate-y-[-2px] font-body-lg" href="#about">درباره ما</a>
+<a class="text-secondary hover:text-primary transition-colors duration-200 hover:translate-y-[-2px] font-body-lg" href="#contact">تماس با ما</a>
+</nav>
+<!-- Brand Logo -->
+<div class="flex items-center gap-3 active:scale-95 transition-all cursor-pointer">
+<img alt="Pouya Bike Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdf-rCK8302YrC08zb6qy9CIclMenHztGcKzX3HfWtiGFG0J_z0hdfB5l-sHgqhx7bzZ2RkbByxO4fCozUMQXkxxBu4lbXHO3StlFJsM-nQ1EyqKXBRRJqZEDE0X25krxB6rx74wiuFRDQ1aKna6lgZtEAowXnhxZSDN9QGzT8RwKPlULaI-0CJZm8acgba9WxVz1zqvdwCwvg8aFNQrlMLhkWB1z-T_ApPk0okL5oBgWnRV5cBiO8mQ"/>
+<span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface">Pouya Bike</span>
+</div>
+<!-- Trailing Action -->
+<a class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2 rounded-DEFAULT font-label-sm uppercase tracking-wide hover:brightness-90 hover:-translate-y-0.5 transition-all" href="https://t.me/Pouya_567" target="_blank">سفارش</a>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[70vh] flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop py-20 bg-surface-container-lowest" id="home">
+<div class="max-w-3xl z-10 space-y-6">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">اوج عملکرد، مهندسی دقیق</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">مجموعه‌ای از برترین دوچرخه‌های حرفه‌ای برای رکاب‌زنان پرشور. طراحی شده برای سرعت، سبکی و دوام بی‌نظیر در هر مسیر.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-DEFAULT font-label-sm uppercase tracking-wider hover:brightness-90 hover:-translate-y-0.5 transition-all text-center w-full sm:w-auto" href="#products">مشاهده محصولات</a>
+</div>
+</div>
+<div class="w-full max-w-5xl mt-16 relative">
+<img class="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A sleek, high-end professional road bicycle standing on a minimalist white studio background. The bicycle features a silver metallic frame, aerodynamic carbon fiber wheels, and precise electronic shifting components. The lighting is soft and even, highlighting the technical craftsmanship and modern design of the bike, evoking a sense of speed and premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH7QFa-OaXPobdHoYS4rLPErz5BprMx2100yFQeUgZwsq-AfElpq5cUyvql0W1O8DANZcpzCTxwKplIa4vrXqpuQSmYuTFOBfjgi0tlDiK3JrBXyghyuf_OIu9dHFZQVodgp6siWZJS0WGNEyVKeAls0wHKqp3V4gYtCAi5NU3-I_giDdFTJKa2095wE-oWHW82EHJWP_sWOtpkqJuj4GF6sODfEY_NX-qINUHUpCkjDrROTQoN0Zyqw"/>
+</div>
+</section>
+<!-- Products Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto bg-background" id="products">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-outline-variant pb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">محصولات ویژه</h2>
+<a class="text-primary font-label-sm flex items-center gap-1 hover:underline mt-4 md:mt-0" href="#">
+                    مشاهده همه
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Mobile Grid (1 col), Tablet/Desktop (2-4 cols) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest border border-outline-variant hover:border-primary/50 rounded-DEFAULT overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-container-low p-6 relative overflow-hidden flex items-center justify-center">
+<span class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-2 py-1 text-[10px] font-bold rounded uppercase tracking-wider z-10">جدید</span>
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 ease-out" data-alt="A detailed close-up shot of a modern, lightweight carbon fiber road bike frame in a matte black finish with subtle gloss branding. The bike is positioned against a clean, light gray background, lit softly to emphasize the aerodynamic curves and high-end technical components. The aesthetic is clinical, premium, and geared towards high-performance cycling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHBw-FUSUOatClIcOTXW-xQL6QMuZZ-AVy6UJCc50qzO1wQUwumHYfIHidebcXok1_KvrOjdZg5Q0Fzy9RFsaqN-9pilrQBsIZ5o00-p-2yYeyig4Mp9-GmZMVHaJeGXOf2QpxBDokO_qm8sR1c25Eegbyfqae9mHg2SomI1U8OEUFuPP7QR1GckIdxZ2neMJ4YUOIfcdpEEGvROZkd4P9z9iJrN59DRz-WGM31jKmr_AzjHaB_UZmlQ"/>
+</div>
+<div class="p-6 flex flex-col gap-2">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Tarmac SL7 Expert</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-2">سرعت و سبکی بی‌نظیر برای مسابقات جاده‌ای.</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-surface-variant">
+<a class="text-primary font-label-sm uppercase hover:text-primary-container transition-colors" href="https://t.me/Pouya_567" target="_blank">سفارش</a>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest border border-outline-variant hover:border-primary/50 rounded-DEFAULT overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-container-low p-6 relative overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 ease-out" data-alt="A side profile view of a premium mountain bike with full suspension, featuring a dark olive green frame and aggressive off-road tires. The bike is displayed in a minimalist studio setting with bright, even lighting that highlights the rugged mechanical parts and high-end craftsmanship. The overall mood is robust, technical, and ready for adventure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcr_9-bQbKW_qXDWxIy8FOjR59UHZ_7xJsmk9wn0UScdvXecGOsLXxBFd8ZlZEnHumFy-67ZxZ7KDIRd_GRweIWSEiHhGQG0FdGUBZSU5YTw91eCJbwM1e29eZ5DHhpUjYa5Ik4VlCQVmQkO1S6fxrh1WQNhhetaFaNIp0sY7VXjROBwOot7BuLz0a68odnSjEQSSnqPRJ7LkpB7IDk3jQEHsoDbb6bIoBWakSJb8Oe-ySylPdaLyNHQ"/>
+</div>
+<div class="p-6 flex flex-col gap-2">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Stumpjumper EVO</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-2">کنترل کامل در سخت‌ترین مسیرهای کوهستانی.</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-surface-variant">
+<a class="text-primary font-label-sm uppercase hover:text-primary-container transition-colors" href="https://t.me/Pouya_567" target="_blank">سفارش</a>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest border border-outline-variant hover:border-primary/50 rounded-DEFAULT overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-container-low p-6 relative overflow-hidden flex items-center justify-center">
+<span class="absolute top-4 right-4 bg-surface-dim text-on-surface px-2 py-1 text-[10px] font-bold rounded uppercase tracking-wider z-10">محبوب</span>
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 ease-out" data-alt="A sleek gravel bike with a metallic bronze frame and tan-wall tires, designed for mixed-terrain riding. Shot in a clean, minimalist studio environment with high-key lighting to accentuate the functional design and premium build quality. The aesthetic is versatile, modern, and high-performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwn7AgjQD-vQVPbLYnul7KuA-mnj1vzgq5LmQ0gEaR3biaP-HARq9eVz6ZwMPx_Caw5vLOMyZC3KlqcS29U3NnDh-GrKxAKBGsx4QqWx3MeD7dAtr6h6gONa_CWdibiCu1taxOuf1J5PLA6f7LVDxg8Wn4xSpo0pppoiBr-6gmsqDPWieavPqkrR6qxycwXtYL7JT6bReQUID3dsnU-hR0OrOQ16E8RfLCORcM-5PHovzOadOoKgIdqA"/>
+</div>
+<div class="p-6 flex flex-col gap-2">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Diverge STR</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-2">راحتی و سرعت در مسیرهای خاکی و آسفالت.</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-surface-variant">
+<a class="text-primary font-label-sm uppercase hover:text-primary-container transition-colors" href="https://t.me/Pouya_567" target="_blank">سفارش</a>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-lowest border border-outline-variant hover:border-primary/50 rounded-DEFAULT overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-container-low p-6 relative overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 ease-out" data-alt="A high-tech electric commuter bicycle featuring an integrated battery design, sleek silver frame, and modern urban accessories. The bike is photographed against a bright white backdrop, focusing on its clean lines and innovative engineering. The mood is efficient, sustainable, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsA2I4LD7QFIAHi0CW0ZphiTz83LRUQSfOfbAunnPukMS1GIWps1A7Xvmk5vehhbDKpwBN2X40zqQTMyeE8-XDDBBlaDZSbjxZ253h521a5MesVXVuWhpQ9He9t2pAJ4z1CUyf-c02lCl4gh-3w8GBTkB_S2weloPuIARh-1MC9MytqA_ou-fiMI1QD_fH-mMceYuOtsWVhnDYJT0V8uhKvzWebjaY9pAev7WexBqstkE-E0l_xRqnQ"/>
+</div>
+<div class="p-6 flex flex-col gap-2">
+<h3 class="font-body-lg text-body-lg text-on-surface font-semibold truncate">Vado SL 4.0</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-2">تردد شهری هوشمند و سبک با نیروی کمکی.</p>
+<div class="flex justify-between items-center mt-auto pt-4 border-t border-surface-variant">
+<a class="text-primary font-label-sm uppercase hover:text-primary-container transition-colors" href="https://t.me/Pouya_567" target="_blank">سفارش</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-section-gap bg-surface" id="about">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 space-y-6">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">داستان ما</h2>
+<div class="w-16 h-1 bg-primary"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        در Pouya Bike، ما معتقدیم دوچرخه‌سواری تنها یک ورزش نیست، بلکه یک سبک زندگی است. با بیش از یک دهه تجربه در ارائه برترین برندهای جهانی، هدف ما ارتقای سطح کیفی دوچرخه‌سواری حرفه‌ای در کشور است.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        تیم متخصص ما با دقت فراوان، محصولاتی را انتخاب می‌کنند که بالاترین استانداردهای مهندسی، ایمنی و طراحی را دارا باشند تا شما بتوانید با اطمینان کامل در هر مسیری رکاب بزنید.
+                    </p>
+</div>
+<div class="w-full md:w-1/2">
+<div class="relative w-full aspect-[4/3] bg-surface-container-low rounded-xl overflow-hidden border border-outline-variant p-4">
+<img class="w-full h-full object-cover rounded-lg grayscale hover:grayscale-0 transition-all duration-700" data-alt="A well-lit, meticulously organized high-end bicycle repair workshop. The scene features professional mechanics working on premium carbon fiber bikes using specialized precision tools. The environment is clean, clinical, and modern, reflecting a commitment to technical excellence and top-tier customer service in the cycling industry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVYFP9hRHyKiYI74yiTrd-oL4F8B4kzNI0tzUMpgg9UGcrNHvJSWNKDVXw_PAdLXV-tn7x7YMAdlKWSFkAzRcavGbT1gLEWXiLQ64FR4i7-EuOdnGvxrk968uwfP4QP6byPyox7peAhy9Hj95jZ0l7d2jeOqN2aM9KfBvZJlhl2QrCuBHPgNvUL9QqPQAtmENdR4cBUyd2dvO8E3p1QWZkOc-WNwBPD9Z4NzrZi3mlQwf__dMymEIaWA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto" id="contact">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 md:p-16 flex flex-col md:flex-row gap-12">
+<div class="w-full md:w-1/2 space-y-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">ارتباط با ما</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">برای مشاوره خرید، خدمات پس از فروش یا هرگونه سوال، با ما در تماس باشید.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<h4 class="font-body-md font-semibold text-on-surface">آدرس فروشگاه</h4>
+<p class="font-body-md text-on-surface-variant mt-1">تهران، خیابان ولیعصر، بالاتر از پارک وی، پلاک ۱۲۳</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">call</span>
+<div>
+<h4 class="font-body-md font-semibold text-on-surface">تلفن تماس</h4>
+<p class="font-body-md text-on-surface-variant mt-1" dir="ltr">۰۲۱ - ۸۸۸۸ ۸۸۸۸</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">send</span>
+<div>
+<h4 class="font-body-md font-semibold text-on-surface">پشتیبانی تلگرام</h4>
+<a class="font-body-md text-primary hover:underline mt-1 block" dir="ltr" href="https://t.me/Pouya_567" target="_blank">@Pouya_567</a>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<form class="space-y-4">
+<div>
+<label class="block font-label-sm text-on-surface-variant mb-1">نام و نام خانوادگی</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-DEFAULT px-4 py-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md" placeholder="علی محمدی" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-on-surface-variant mb-1">شماره تماس</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-DEFAULT px-4 py-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md text-left" dir="ltr" placeholder="0912 345 6789" type="tel"/>
+</div>
+<div>
+<label class="block font-label-sm text-on-surface-variant mb-1">پیام شما</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-DEFAULT px-4 py-3 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body-md resize-none" placeholder="چگونه می‌توانیم به شما کمک کنیم؟" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-sm uppercase tracking-wide py-4 rounded-DEFAULT hover:brightness-90 transition-all flex items-center justify-center gap-2" type="button">
+<span>ارسال پیام</span>
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant w-full py-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<!-- Brand -->
+<div class="text-headline-md font-headline-md text-on-surface font-bold">
+                Pouya Bike
+            </div>
+<!-- Copyright -->
+<div class="font-body-md text-body-md text-secondary text-center md:text-right">
+                © ۲۰۲۴ Pouya Bike. تمامی حقوق محفوظ است.
+            </div>
+<!-- Links -->
+<div class="flex gap-6">
+<a class="text-secondary hover:text-primary transition-colors font-body-md" href="https://t.me/Pouya_567" target="_blank">تلگرام</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md" href="#">اینستاگرام</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md" href="#">واتس‌اپ</a>
+</div>
+</div>
+</footer>
+</body></html>
