@@ -1232,11 +1232,21 @@ footer{
     }
 
     .no{
-        font-size:1rem;
+        font-size:1.5rem;
     }
 
     .no::after{
-        width:500px;
+       conten:"";
+       
+       diplay:block;
+       
+       width:500px;
+          
+       height:5px;
+       
+       background-color:white;
+       
+       margin:auto;
     }
 
     .yes{
