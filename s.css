@@ -942,7 +942,7 @@ input[type="checkbox"]:checked {
 
     width: 840px;
 
-    max-width: 100%;
+    max-width: 90%;
 
     height: 5px;
 
@@ -1240,7 +1240,8 @@ footer{
        
        diplay:block;
        
-       width:400px;
+       width:600px;
+       max-width:90%;
           
        height:3px;
        
